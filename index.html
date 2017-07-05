@@ -11,6 +11,8 @@
 
         <link href="node_modules/materialize-css/dist/css/materialize.min.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
+
+        <script src="bundle.js" type="application/javascript"></script>
     </head>
     <body>
 
@@ -23,9 +25,9 @@
 
         <!-- SEARCH -->
         <div class="section no-pad-bot container center" id="search-banner">
-            <h2>Vind een parking!</h2>
+            <h2>Find a parking!</h2>
             <div class="search-wrapper card">
-                <input id="search" placeholder="Zoek op locatie of parking" />
+                <input id="search" placeholder="Search based on location" />
             </div>
         </div>
 
@@ -33,16 +35,16 @@
         <div class="parking-list">
             <div class="container">
                 <div class="center">
-                    <h3><i class="material-icons">room</i> Dichtbij</h3>
+                    <h3><i class="material-icons">room</i> Nearby</h3>
                 </div>
 
                 <div class="row">
-                    <a href="#modal1">
+                    <a href="#P10Modal">
                         <div class="col s12">
                             <div class="card-panel">
                                 <div class="row">
                                     <div class="col s6">
-                                        <p>Parking1</p>
+                                        <p>Sint-Pieters</p>
                                     </div>
                                     <div class="col s3">
                                         <p>45</p>
@@ -55,12 +57,12 @@
                         </div>
                     </a>
 
-                    <a href="#modal1">
+                    <a href="#P7Modal">
                         <div class="col s12">
                             <div class="card-panel">
                                 <div class="row">
                                     <div class="col s6">
-                                        <p>Parking1</p>
+                                        <p>Sint-Michiels</p>
                                     </div>
                                     <div class="col s3">
                                         <p>45</p>
@@ -73,12 +75,66 @@
                         </div>
                     </a>
 
-                    <a href="#modal1">
+                    <a href="#P1Modal">
                         <div class="col s12">
                             <div class="card-panel">
                                 <div class="row">
                                     <div class="col s6">
-                                        <p>Parking1</p>
+                                        <p>Vrijdagmarkt</p>
+                                    </div>
+                                    <div class="col s3">
+                                        <p>45</p>
+                                    </div>
+                                    <div class="col s3 trending">
+                                        <p><i class="material-icons">trending_down</i></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#P4Modal">
+                        <div class="col s12">
+                            <div class="card-panel">
+                                <div class="row">
+                                    <div class="col s6">
+                                        <p>Savaanstraat</p>
+                                    </div>
+                                    <div class="col s3">
+                                        <p>45</p>
+                                    </div>
+                                    <div class="col s3 trending">
+                                        <p><i class="material-icons">trending_down</i></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#P8Modal">
+                        <div class="col s12">
+                            <div class="card-panel">
+                                <div class="row">
+                                    <div class="col s6">
+                                        <p>Ramen</p>
+                                    </div>
+                                    <div class="col s3">
+                                        <p>45</p>
+                                    </div>
+                                    <div class="col s3 trending">
+                                        <p><i class="material-icons">trending_down</i></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#P2Modal">
+                        <div class="col s12">
+                            <div class="card-panel">
+                                <div class="row">
+                                    <div class="col s6">
+                                        <p>Reep</p>
                                     </div>
                                     <div class="col s3">
                                         <p>45</p>
@@ -100,12 +156,77 @@
 	    <footer></footer>
 
         <!-- Parking modal -->
-        <div id="modal1" class="modal">
+        <div id="P10Modal" class="modal">
             <div class="modal-content">
-                <h4>Parking name here</h4>
+                <h4>Sint-Pieters</h4>
                 <p>Available spots</p>
                 <div class="graphs">
+                    <canvas id="P10Chart"></canvas>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect btn">Get directions</a>
+            </div>
+        </div>
 
+        <div id="P7Modal" class="modal">
+            <div class="modal-content">
+                <h4>Sint-Michiels</h4>
+                <p>Available spots</p>
+                <div class="graphs">
+                    <canvas id="P7Chart"></canvas>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect btn">Get directions</a>
+            </div>
+        </div>
+
+        <div id="P1Modal" class="modal">
+            <div class="modal-content">
+                <h4>Vrijdagmarkt</h4>
+                <p>Available spots</p>
+                <div class="graphs">
+                    <canvas id="P1Chart"></canvas>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect btn">Get directions</a>
+            </div>
+        </div>
+
+        <div id="P4Modal" class="modal">
+            <div class="modal-content">
+                <h4>Savaanstraat</h4>
+                <p>Available spots</p>
+                <div class="graphs">
+                    <canvas id="P4Chart"></canvas>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect btn">Get directions</a>
+            </div>
+        </div>
+
+        <div id="P8Modal" class="modal">
+            <div class="modal-content">
+                <h4>Ramen</h4>
+                <p>Available spots</p>
+                <div class="graphs">
+                    <canvas id="P8Chart"></canvas>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect btn">Get directions</a>
+            </div>
+        </div>
+
+        <div id="P2Modal" class="modal">
+            <div class="modal-content">
+                <h4>Reep</h4>
+                <p>Available spots</p>
+                <div class="graphs">
+                    <canvas id="P2Chart"></canvas>
                 </div>
             </div>
             <div class="modal-footer">
@@ -117,5 +238,60 @@
         <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
         <script type="text/javascript" src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
         <script type="text/javascript" src="js/script.js"></script>
+
+        <script type="application/javascript">
+          let timeStampStrlen = "0000-00-00T00:00:00".length;
+          let parkings = {
+            "P1": [], "P2": [], "P4": [],
+            "P7": [], "P8": [], "P10": []
+          };
+          window.gatherData(10).then(result => {
+            let vacantSpaces = result.getTriples(null, "datex:parkingNumberOfVacantSpaces");
+            vacantSpaces.forEach(triple => {
+              triple.time = triple.graph.substr(triple.graph.length - timeStampStrlen);
+            });
+            for (let i = vacantSpaces.length-1; i > 0; i--) {
+              let triple = vacantSpaces[i];
+              let parking = triple.subject.match(/P[0-9]*$/)[0];
+              let vacant = parseInt(triple.object.substr(1, triple.object.length-2));
+              parkings[parking].push(vacant);
+            }
+            Object.keys(parkings).forEach((parking) => {
+              let array = parkings[parking];
+              let data = [];
+              for (let i = 0; i < array.length; i++) {
+                data.push({x:i, y:array[i]});
+              }
+              let $chart = $("#" + parking + "Chart");
+              let chart = new window.Chart($chart, {
+                type: 'scatter',
+                data: {
+                  datasets: [{
+                    label: "Vacant spaces",
+                    data: data,
+                    pointRadius: 0,
+                    backgroundColor: [
+                      'rgba(255, 99, 132, 0.2)',
+                    ],
+                    borderColor: [
+                      'rgba(255,99,132,1)',
+                    ],
+                    borderWidth: 1
+                  }]
+                },
+                options: {
+                  scales: {
+                    xAxes: [{
+                      ticks: {
+                        display: false
+                      }
+                    }]
+                  }
+                }
+              });
+              chart.canvas.parentNode.style.width = '400px';
+            })
+          });
+        </script>
     </body>
 </html>
