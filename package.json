@@ -1,0 +1,21 @@
+{
+  "name": "smartflanders-hackathon",
+  "version": "1.0.0",
+  "description": "Hackathon project",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oSoc17/smartflanders-hackathon.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oSoc17/smartflanders-hackathon/issues"
+  },
+  "homepage": "https://github.com/oSoc17/smartflanders-hackathon#readme",
+  "dependencies": {
+    "browserify": "^14.4.0",
+    "chart.js": "^2.6.0",
+    "ldfetch": "0.0.3",
+    "moment": "^2.18.1",
+    "n3": "^0.10.0"
+  }
+}
