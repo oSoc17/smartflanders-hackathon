@@ -2,7 +2,7 @@ const ldfetch = require('ldfetch');
 const n3 = require('n3');
 const base_url = "http://linked.open.gent/parking/";
 
-function fetchUrl(url, amount, state) {
+function fetchUrl(url, amount, max, state) {
   let fetch = new ldfetch();
 
   return new Promise((resolve) => {
@@ -11,14 +11,13 @@ function fetchUrl(url, amount, state) {
       state.addPrefixes(response.prefixes);
       return response;
     }).then(response => {
-      if (amount < 5) {
+      if (amount < max) {
         let responseStore = new n3.Store();
         responseStore.addTriples(response.triples);
         responseStore.addPrefixes(response.prefixes);
 
         let prevUrl = responseStore.getTriples(null,"hydra:previous")[0].object;
-        console.log("previous: " + prevUrl);
-        return fetchUrl(prevUrl, amount+1, state);
+        return fetchUrl(prevUrl, amount+1, max, state);
       } else {
         return state;
       }
@@ -26,10 +25,8 @@ function fetchUrl(url, amount, state) {
   })
 }
 
-global.gatherData = function () {
-  fetchUrl(base_url, 0, new n3.Store()).then(res => {
-    console.log("Done!");
-    console.log(res);
-  });
-  return 100;
+global.gatherData = function (max) {
+  return fetchUrl(base_url, 0, max, new n3.Store());
 };
+
+global.chart = require('chart.js');
