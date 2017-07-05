@@ -2,20 +2,11 @@
    Common
    =========================================== */
 
-html {
-	font-size: 62.5%;
-}
-
 body {
-	font-family: 'Palanquin', arial, sans-serif;
-	background-color: #f7f6f6;
+	font-family: 'Open Sans', arial sans-serif;;
 	background-repeat: repeat;
 }
 
-body > * {
-	font-size: 1.2rem;
-	line-height: 1.4rem;
-}
 
 * {
 	-webkit-box-sizing: border-box; /* use border-box box model everywhere */
@@ -25,19 +16,36 @@ body > * {
 	box-sizing: border-box;
 }
 
+h2 {
+    font-size: 2.5rem;
+    padding-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    color: gray;
+}
+
 a {
 	text-decoration: none;
+    color: #000;
 }
 
 ul {
 	list-style: none;
 }
- 
-.wrapper {
-	max-width: 98rem;
-	min-width: 32rem;
-	margin: 0 auto;
-	padding: 0 1rem;
+
+@media only screen and (min-width: 601px) {
+    .container {
+        width: 60%;
+    }
+}
+
+@media only screen and (min-width: 993px) {
+    .container {
+        width: 50%;
+    }
 }
 
 
@@ -45,20 +53,59 @@ ul {
    Header
    =========================================== */
 
-/* GENERAL */
-
-header {
-  padding: 2rem;
-	margin-bottom: 1rem;
-  background-color: #ffffff;
-  box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem #efefef;
-  text-align: center;
+.section {
+    padding-top: 2rem;
 }
 
-header h1 span:nth-of-type(1) {
-  color: #4256f4;
+brand-logo {
+    float: left;
 }
 
-header h1 span:nth-of-type(2) {
-  color: #f72727;
+/* ===========================================
+   Search banner
+   =========================================== */
+
+#search-banner {
+    margin-bottom: 60px;
 }
+
+#search {
+    border-bottom: none;
+    margin: 0 0 0 1rem;
+}
+
+#search:focus {
+    border-bottom: none;
+    box-shadow: none;
+}
+
+
+/* ===========================================
+   Parking list
+   =========================================== */
+
+.parking-list {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    background-color: #f5f5f5;
+}
+
+.row {
+    margin-bottom: 1px;
+}
+
+.card-panel {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.card-panel:hover {
+    background-color: #81d4fa;
+}
+
+.trending p {
+    font-size: 0.9rem;
+    line-height: 0.9rem;
+}
+
