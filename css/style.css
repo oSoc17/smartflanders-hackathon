@@ -52,6 +52,10 @@ ul {
     background-color: #4fc3f7;
 }
 
+.btn:hover {
+    background-color: #039be5;
+}
+
 
 /* ===========================================
    Header
@@ -109,11 +113,23 @@ brand-logo {
 }
 
 .card-panel:hover {
-    background-color: #81d4fa;
+    background-color: #e1f5fe;
 }
 
 .trending p {
     font-size: 0.9rem;
     line-height: 0.9rem;
+}
+
+/* ===========================================
+   Modal 
+   =========================================== */
+
+.graphs {
+    margin: 0 auto;
+}
+
+.modal-footer a {
+    margin: 20px;
 }
 
