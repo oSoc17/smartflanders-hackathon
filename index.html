@@ -22,14 +22,17 @@
         "P7": [], "P8": [], "P10": []
     };
     window.gatherData(10).then(result => {
-        result.getTriples(null, "datex:parkingNumberOfVacantSpaces").forEach(triple => {
-            //let time = triple.graph.substr(triple.graph.length - timeStampStrlen);
+        let vacantSpaces = result.getTriples(null, "datex:parkingNumberOfVacantSpaces");
+        vacantSpaces.forEach(triple => {
+          triple.time = triple.graph.substr(triple.graph.length - timeStampStrlen);
+        });
+        for (let i = vacantSpaces.length-1; i > 0; i--) {
+            let triple = vacantSpaces[i];
             let parking = triple.subject.match(/P[0-9]*$/)[0];
             let vacant = parseInt(triple.object.substr(1, triple.object.length-2));
-
             parkings[parking].push(vacant);
-        });
-      Object.keys(parkings).forEach((parking) => {
+        }
+        Object.keys(parkings).forEach((parking) => {
         let array = parkings[parking];
         let data = [];
         for (let i = 0; i < array.length; i++) {
@@ -62,9 +65,8 @@
             }
           }
         });
-        //chart.canvas.parentNode.style.width = '400px';
-        console.log(chart.data);
-      })
+        chart.canvas.parentNode.style.width = '400px';
+        })
     });
 </script>
 </html>

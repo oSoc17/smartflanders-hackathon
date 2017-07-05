@@ -30,3 +30,4 @@ global.gatherData = function (max) {
 };
 
 global.chart = require('chart.js');
+global.moment = require('moment');
