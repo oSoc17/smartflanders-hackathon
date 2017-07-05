@@ -159,7 +159,7 @@
         <div id="P10Modal" class="modal">
             <div class="modal-content">
                 <h4>Sint-Pieters</h4>
-                <p>Available spots</p>
+                <p id="P10VacantModal">...</p>
                 <div class="graphs">
                     <canvas id="P10Chart"></canvas>
                 </div>
@@ -172,7 +172,7 @@
         <div id="P7Modal" class="modal">
             <div class="modal-content">
                 <h4>Sint-Michiels</h4>
-                <p>Available spots</p>
+                <p id="P7VacantModal">...</p>
                 <div class="graphs">
                     <canvas id="P7Chart"></canvas>
                 </div>
@@ -185,7 +185,7 @@
         <div id="P1Modal" class="modal">
             <div class="modal-content">
                 <h4>Vrijdagmarkt</h4>
-                <p>Available spots</p>
+                <p id="P1VacantModal">...</p>
                 <div class="graphs">
                     <canvas id="P1Chart"></canvas>
                 </div>
@@ -198,7 +198,7 @@
         <div id="P4Modal" class="modal">
             <div class="modal-content">
                 <h4>Savaanstraat</h4>
-                <p>Available spots</p>
+                <p id="P4VacantModal">...</p>
                 <div class="graphs">
                     <canvas id="P4Chart"></canvas>
                 </div>
@@ -211,7 +211,7 @@
         <div id="P8Modal" class="modal">
             <div class="modal-content">
                 <h4>Ramen</h4>
-                <p>Available spots</p>
+                <p id="P8VacantModal"></p>
                 <div class="graphs">
                     <canvas id="P8Chart"></canvas>
                 </div>
@@ -224,7 +224,7 @@
         <div id="P2Modal" class="modal">
             <div class="modal-content">
                 <h4>Reep</h4>
-                <p>Available spots</p>
+                <p id="P2VacantModal">...</p>
                 <div class="graphs">
                     <canvas id="P2Chart"></canvas>
                 </div>
@@ -261,6 +261,7 @@
               // FILL IN CURRENT AMOUNT OF VACANT SPACES
               let current = array[array.length-1];
               $("#" + parking + "Vacant").html(current);
+              $("#" + parking + "VacantModal").html(current);
               // CALCULATE TREND
               let oldest = array[0];
               let trend = current > oldest ? "trending_up" : "trending_down";
