@@ -1,0 +1,119 @@
+/* ===========================================
+   Common
+   =========================================== */
+
+body {
+	font-family: 'Open Sans', arial sans-serif;;
+	background-repeat: repeat;
+}
+
+
+* {
+	-webkit-box-sizing: border-box; /* use border-box box model everywhere */
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+h2 {
+    font-size: 2.5rem;
+    padding-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    color: gray;
+}
+
+a {
+	text-decoration: none;
+    color: #000;
+}
+
+ul {
+	list-style: none;
+}
+
+@media only screen and (min-width: 601px) {
+    .container {
+        width: 60%;
+    }
+}
+
+@media only screen and (min-width: 993px) {
+    .container {
+        width: 50%;
+    }
+}
+
+.btn {
+    background-color: #4fc3f7;
+}
+
+
+/* ===========================================
+   Header
+   =========================================== */
+
+nav {
+    background-color: #4fc3f7;
+}
+
+.section {
+    padding-top: 2rem;
+}
+
+brand-logo {
+    float: left;
+}
+
+/* ===========================================
+   Search banner
+   =========================================== */
+
+#search-banner {
+    margin-bottom: 100px;
+}
+
+#search {
+    border-bottom: none;
+    margin: 0 0 0 1rem;
+}
+
+#search:focus {
+    border-bottom: none;
+    box-shadow: none;
+}
+
+
+/* ===========================================
+   Parking list
+   =========================================== */
+
+.parking-list {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    background-color: #f5f5f5;
+}
+
+.row {
+    margin-bottom: 1px;
+}
+
+.card-panel {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.card-panel:hover {
+    background-color: #81d4fa;
+}
+
+.trending p {
+    font-size: 0.9rem;
+    line-height: 0.9rem;
+}
+
