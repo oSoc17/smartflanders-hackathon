@@ -6,17 +6,22 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/oSoc17/smartflanders-hackathon.git"
   },
-  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/oSoc17/smartflanders-hackathon/issues"
   },
   "homepage": "https://github.com/oSoc17/smartflanders-hackathon#readme",
   "dependencies": {
-    "materialize-css": "^0.99.0"
+    "materialize-css": "^0.99.0",
+    "browserify": "^14.4.0",
+    "chart.js": "^2.6.0",
+    "ldfetch": "0.0.3",
+    "moment": "^2.18.1",
+    "n3": "^0.10.0"
   }
 }
