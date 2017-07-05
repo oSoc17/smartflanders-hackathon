@@ -1,0 +1,64 @@
+/* ===========================================
+   Common
+   =========================================== */
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Palanquin', arial, sans-serif;
+	background-color: #f7f6f6;
+	background-repeat: repeat;
+}
+
+body > * {
+	font-size: 1.2rem;
+	line-height: 1.4rem;
+}
+
+* {
+	-webkit-box-sizing: border-box; /* use border-box box model everywhere */
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+ 
+.wrapper {
+	max-width: 98rem;
+	min-width: 32rem;
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+
+/* ===========================================
+   Header
+   =========================================== */
+
+/* GENERAL */
+
+header {
+  padding: 2rem;
+	margin-bottom: 1rem;
+  background-color: #ffffff;
+  box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem #efefef;
+  text-align: center;
+}
+
+header h1 span:nth-of-type(1) {
+  color: #4256f4;
+}
+
+header h1 span:nth-of-type(2) {
+  color: #f72727;
+}
