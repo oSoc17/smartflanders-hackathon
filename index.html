@@ -47,10 +47,10 @@
                                         <p>Sint-Pieters</p>
                                     </div>
                                     <div class="col s3">
-                                        <p>45</p>
+                                        <p id="P10Vacant">...</p>
                                     </div>
                                     <div class="col s3 trending">
-                                        <p><i class="material-icons">trending_down</i></p>
+                                        <p><i class="material-icons" id="P10Trend">...</i></p>
                                     </div>
                                 </div>
                             </div>
@@ -65,10 +65,10 @@
                                         <p>Sint-Michiels</p>
                                     </div>
                                     <div class="col s3">
-                                        <p>45</p>
+                                        <p id="P7Vacant">...</p>
                                     </div>
                                     <div class="col s3 trending">
-                                        <p><i class="material-icons">trending_up</i></p>
+                                        <p><i class="material-icons" id="P7Trend">...</i></p>
                                     </div>
                                 </div>
                             </div>
@@ -83,10 +83,10 @@
                                         <p>Vrijdagmarkt</p>
                                     </div>
                                     <div class="col s3">
-                                        <p>45</p>
+                                        <p id="P1Vacant">...</p>
                                     </div>
                                     <div class="col s3 trending">
-                                        <p><i class="material-icons">trending_down</i></p>
+                                        <p><i class="material-icons" id="P1Trend">...</i></p>
                                     </div>
                                 </div>
                             </div>
@@ -101,10 +101,10 @@
                                         <p>Savaanstraat</p>
                                     </div>
                                     <div class="col s3">
-                                        <p>45</p>
+                                        <p id="P4Vacant">...</p>
                                     </div>
                                     <div class="col s3 trending">
-                                        <p><i class="material-icons">trending_down</i></p>
+                                        <p><i class="material-icons" id="P4Trend">...</i></p>
                                     </div>
                                 </div>
                             </div>
@@ -119,10 +119,10 @@
                                         <p>Ramen</p>
                                     </div>
                                     <div class="col s3">
-                                        <p>45</p>
+                                        <p id="P8Vacant">...</p>
                                     </div>
                                     <div class="col s3 trending">
-                                        <p><i class="material-icons">trending_down</i></p>
+                                        <p><i class="material-icons" id="P8Trend">...</i></p>
                                     </div>
                                 </div>
                             </div>
@@ -137,10 +137,10 @@
                                         <p>Reep</p>
                                     </div>
                                     <div class="col s3">
-                                        <p>45</p>
+                                        <p id="P2Vacant">...</p>
                                     </div>
                                     <div class="col s3 trending">
-                                        <p><i class="material-icons">trending_down</i></p>
+                                        <p><i class="material-icons" id="P2Trend">...</i></p>
                                     </div>
                                 </div>
                             </div>
@@ -258,6 +258,15 @@
             }
             Object.keys(parkings).forEach((parking) => {
               let array = parkings[parking];
+              // FILL IN CURRENT AMOUNT OF VACANT SPACES
+              let current = array[array.length-1];
+              $("#" + parking + "Vacant").html(current);
+              // CALCULATE TREND
+              let oldest = array[0];
+              let trend = current > oldest ? "trending_up" : "trending_down";
+              $("#" + parking + "Trend").html(trend);
+
+              // CREATE GRAPH IN MODAL
               let data = [];
               for (let i = 0; i < array.length; i++) {
                 data.push({x:i, y:array[i]});
