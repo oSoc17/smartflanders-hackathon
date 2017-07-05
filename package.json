@@ -12,6 +12,7 @@
   },
   "homepage": "https://github.com/oSoc17/smartflanders-hackathon#readme",
   "dependencies": {
+    "browserify": "^14.4.0",
     "ldfetch": "0.0.3",
     "n3": "^0.10.0"
   }
