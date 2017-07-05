@@ -10,5 +10,9 @@
   "bugs": {
     "url": "https://github.com/oSoc17/smartflanders-hackathon/issues"
   },
-  "homepage": "https://github.com/oSoc17/smartflanders-hackathon#readme"
+  "homepage": "https://github.com/oSoc17/smartflanders-hackathon#readme",
+  "dependencies": {
+    "ldfetch": "0.0.3",
+    "n3": "^0.10.0"
+  }
 }
