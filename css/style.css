@@ -48,10 +48,18 @@ ul {
     }
 }
 
+.btn {
+    background-color: #4fc3f7;
+}
+
 
 /* ===========================================
    Header
    =========================================== */
+
+nav {
+    background-color: #4fc3f7;
+}
 
 .section {
     padding-top: 2rem;
