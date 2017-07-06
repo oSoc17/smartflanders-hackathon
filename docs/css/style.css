@@ -1,0 +1,145 @@
+/* ===========================================
+   Common
+   =========================================== */
+
+body {
+	font-family: 'Roboto', arial sans-serif;;
+	background-repeat: repeat;
+}
+
+
+* {
+	-webkit-box-sizing: border-box; /* use border-box box model everywhere */
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+h2 {
+    font-size: 3rem;
+    padding-bottom: 20px;
+    font-weight: 100;
+}
+
+h3 {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    font-weight: 300;
+    color: gray;
+}
+
+a {
+	text-decoration: none;
+    color: #000;
+}
+
+ul {
+	list-style: none;
+}
+
+@media only screen and (min-width: 601px) {
+    .container {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 993px) {
+    .container {
+        width: 40%;
+    }
+}
+
+.btn {
+    background-color: #4fc3f7;
+}
+
+.btn:hover {
+    background-color: #039be5;
+}
+
+
+/* ===========================================
+   Header
+   =========================================== */
+
+nav {
+    background-color: #4fc3f7;
+    margin-bottom: 3rem;
+}
+
+nav a span:nth-of-type(1) {
+    font-weight: 300;
+}
+nav a span:nth-of-type(2) {
+  font-weight: 100;
+}
+
+.section {
+    padding-top: 2rem;
+}
+
+brand-logo {
+    float: left;
+}
+
+/* ===========================================
+   Search banner
+   =========================================== */
+
+#search-banner {
+    margin-bottom: 100px;
+}
+
+#search {
+    border-bottom: none;
+    margin: 0 0 0 1rem;
+}
+
+#search:focus {
+    border-bottom: none;
+    box-shadow: none;
+}
+
+
+/* ===========================================
+   Parking list
+   =========================================== */
+
+.parking-list {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    background-color: #f5f5f5;
+}
+
+.row {
+    margin-bottom: 1px;
+}
+
+.card-panel {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.card-panel:hover {
+    background-color: #e1f5fe;
+}
+
+.trending p {
+    font-size: 0.9rem;
+    line-height: 0.9rem;
+}
+
+/* ===========================================
+   Modal 
+   =========================================== */
+
+.graphs {
+    margin: 0 auto;
+}
+
+.modal-footer a {
+    margin: 20px;
+}
+
